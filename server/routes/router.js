@@ -32,6 +32,9 @@ const upload = multer({ storage: storage });
 // Authentication Routes
 router.post("/signup", registerController);
 router.post("/login", loginController);
+// Authentication Routes
+router.post("/auth/register", registerController);
+router.post("/auth/login", loginController);
 
 // Users Routes
 router.get("/users/:id", checkUser, getUserDetails);
@@ -39,6 +42,9 @@ router.get("/get-users/:username", getAllUsers);
 router.put("/update-user/", authentication, upload.single("img"), updateUser);
 router.delete("/delete-user", authentication, deleteUser);
 
+router.get("/posts", getAllBlogs);
+router.get("/posts/:id", checkUser, getBlogById);
+router.delete("/posts/:id", authentication, deleteBlog);
 // Blogs Routes
 router.get("/get-blogs", getAllBlogs);
 router.get("/get-blog/:blogId", checkUser, getBlogById);

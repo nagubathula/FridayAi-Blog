@@ -57,7 +57,7 @@ const AuthForm = () => {
         </div>
         {!isLogin && (
           <>
-            <div className="flex gap-3">
+            <div className="flex gap-3 text-white">
               <Input
                 type="text"
                 name="firstname"
