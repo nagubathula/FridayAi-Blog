@@ -116,57 +116,60 @@ const Blogs = () => {
             <article className="prose-neutral prose-lg lg:prose-xl text-zinc-300">
               {parse(data.description)}
             </article>
-            <div className="space-y-4">
-              <form
-                action="POST"
-                onSubmit={handleComment}
-                className="flex relative"
-              >
-                <input
-                  type="text"
-                  required
-                  className="w-full bg-transparent border-b h-10 px-2 focus:outline-0"
-                  placeholder="Add a comment..."
-                  value={comment}
-                  onChange={(e) => setComment(e.target.value)}
-                />
-                <div className="absolute right-0">
-                  <GradientButton type="submit" disabled={loading}>
-                    Add
-                  </GradientButton>
-                </div>
-              </form>
-              {commentData && commentData.length > 0 ? (
-                commentData.map((item) => (
-                  <div key={item._id} className="text-zinc-300">
-                    <div className="flex justify-between">
-                      <Link
-                        to={`/users/${item.username}`}
-                        className="hover:underline"
-                      >
-                        @{item.username}
-                      </Link>
-                      <div className="flex items-center gap-1 ">
-                        <span>{item.createdAt.substring(0, 10)}</span>
-                        {item.isUser && (
-                          <button
-                            disabled={loading}
-                            className="disabled:brightness-50"
-                          >
-                            <MdDelete
-                              onClick={() => deleteComment(item._id)}
-                              className="cursor-pointer text-red-600"
-                            />
-                          </button>
-                        )}
-                      </div>
-                    </div>
-                    <p className="text-zinc-100">{item.description}</p>
+            <div className="">
+              <h1 className="text-2xl font-bold py-8">Comments</h1>
+              <div className="space-y-4">
+                <form
+                  action="POST"
+                  onSubmit={handleComment}
+                  className="flex relative"
+                >
+                  <input
+                    type="text"
+                    required
+                    className="w-full bg-transparent border-b h-10 px-2 focus:outline-0"
+                    placeholder="Add a comment..."
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                  />
+                  <div className="absolute right-0">
+                    <GradientButton type="submit" disabled={loading}>
+                      Add
+                    </GradientButton>
                   </div>
-                ))
-              ) : (
-                <h1>There are currently no comments on this blog post.</h1>
-              )}
+                </form>
+                {commentData && commentData.length > 0 ? (
+                  commentData.map((item) => (
+                    <div key={item._id} className="text-zinc-300">
+                      <div className="flex justify-between">
+                        <Link
+                          to={`/users/${item.username}`}
+                          className="hover:underline"
+                        >
+                          @{item.username}
+                        </Link>
+                        <div className="flex items-center gap-1 ">
+                          <span>{item.createdAt.substring(0, 10)}</span>
+                          {item.isUser && (
+                            <button
+                              disabled={loading}
+                              className="disabled:brightness-50"
+                            >
+                              <MdDelete
+                                onClick={() => deleteComment(item._id)}
+                                className="cursor-pointer text-red-600"
+                              />
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                      <p className="text-zinc-100">{item.description}</p>
+                    </div>
+                  ))
+                ) : (
+                  <h1>There are currently no comments on this blog post.</h1>
+                )}
+              </div>
             </div>
           </div>
         </div>

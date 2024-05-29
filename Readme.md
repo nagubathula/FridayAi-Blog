@@ -1,10 +1,11 @@
-Certainly! Here's the modified README with sensitive environmental variable details removed:
-
----
-
-# Blog-Tech
+# Friday-Ai-BLog
 
 This project consists of a frontend and backend for a blog application built using React, Express, and MongoDB.
+
+## Live Demo
+
+Check out the live demo of the Blogging Platform [here](https://friday-ai-blog.vercel.app/).
+
 
 ## Frontend
 
@@ -87,9 +88,17 @@ npm start
 
 ### Environment Variables
 
-Ensure you have a `.env` file in the backend directory with the required variables.
+Ensure you have a `.env` file in the backend and frontend directories with the required variables.
 
 ## Images
 
+![Image ](images/image.png)
 ![Image 1](images/image1.png)
 ![Image 2](images/image2.png)
+![Image 3](images/image3.png)
+![Image 4](images/image4.png)
+![Image 5](images/image5.png)
+![Image 6](images/image6.png)
+![Image 7](images/image7.png)
+![Image 8](images/image8.png)
+
