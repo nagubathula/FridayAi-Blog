@@ -89,10 +89,7 @@ npm start
 
 Ensure you have a `.env` file in the backend directory with the required variables.
 
-## License
+## Images
 
-This project is licensed under the ISC License. See the [LICENSE](LICENSE) file for details.
-
----
-
-This README is now ready to be customized further and used for your project!
+![Image 1](images/image1.png)
+![Image 2](images/image2.png)
