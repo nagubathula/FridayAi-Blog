@@ -71,10 +71,10 @@ const Blogs = () => {
       </Helmet>
       <motion.div
         style={{ scaleX: scrollYProgress }}
-        className="h-1 w-full fixed left-0 right-0 top-0 bg-slate-300 transform origin-left"
+        className=" w-full fixed left-0 right-0 top-0 bg-zinc-300 transform origin-left"
       />
       {loadingBlog ? (
-        <div className="col-span-3 animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-slate-500" />
+        <div className="col-span-3 animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-zinc-500" />
       ) : data && !isError ? (
         <div className="w-[85%] md:w-[70%] xl:w-[55%]">
           <div className="flex justify-between">
@@ -113,7 +113,7 @@ const Blogs = () => {
               </Link>
               <span>Created on: {data.createdAt.substring(0, 10)}</span>
             </div>
-            <article className="prose-neutral prose-lg lg:prose-xl text-gray-300">
+            <article className="prose-neutral prose-lg lg:prose-xl text-zinc-300">
               {parse(data.description)}
             </article>
             <div className="space-y-4">
@@ -138,7 +138,7 @@ const Blogs = () => {
               </form>
               {commentData && commentData.length > 0 ? (
                 commentData.map((item) => (
-                  <div key={item._id} className="text-slate-300">
+                  <div key={item._id} className="text-zinc-300">
                     <div className="flex justify-between">
                       <Link
                         to={`/users/${item.username}`}
@@ -161,7 +161,7 @@ const Blogs = () => {
                         )}
                       </div>
                     </div>
-                    <p className="text-slate-100">{item.description}</p>
+                    <p className="text-zinc-100">{item.description}</p>
                   </div>
                 ))
               ) : (

@@ -37,15 +37,15 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] opacity-[0.05]" />
-      <div className="absolute size-96 bg-neutral-700 top-0 rounded-full blur-[150px] -z-50" />
+      <div className="absolute size-96 bg-neutral-800 top-0 rounded-full blur-[150px] -z-50" />
       <div className="my-44 sm:my-52 flex flex-col gap-14 items-center justify-center text-center">
         <h1 className="text-5xl md:w-[75%] md:text-6xl xl:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 leading-tight px-4 md:px-0">
           Start Sharing Your Voice Today!
         </h1>
-        <p className="w-11/12 md:w-[55%] sm:text-xl text-slate-400">
+        <p className="w-11/12 md:w-[55%] sm:text-xl text-zinc-400">
           Ignite your passion for writing and share your voice with the world
           through our{" "}
-          <span className="text-slate-100">intuitive blogging platform.</span>{" "}
+          <span className="text-zinc-100">intuitive blogging platform.</span>{" "}
           Unleash your creativity and join a community of fellow bloggers today.
         </p>
         <div className="w-4/5 md:w-[40%] relative">
@@ -61,7 +61,7 @@ const Home = () => {
           <BiSearchAlt className="absolute h-11 top-1 right-5 text-xl" />
           {searchRes && searchRes.length > 0 && isFocused && (
             <motion.div
-              className="absolute backdrop-blur-xl bg-slate-950 mt-5 p-5 rounded-xl max-h-80 overflow-y-scroll"
+              className="absolute backdrop-blur-xl bg-zinc-950 mt-5 p-5 rounded-xl max-h-80 overflow-y-scroll"
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ type: "spring", stiffness: 200, damping: 10 }}

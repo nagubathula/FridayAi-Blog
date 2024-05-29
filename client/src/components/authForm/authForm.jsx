@@ -45,9 +45,11 @@ const AuthForm = () => {
       >
         <div>
           <h1 className="font-bold text-3xl text-neutral-800 dark:text-neutral-200">
-            {isLogin ? "Log in to Blog Tech" : "Sign Up in to Blog Tech"}
+            {isLogin
+              ? "Log in to Friday AI Blog"
+              : "Sign Up in to Friday AI Blog"}
           </h1>
-          <p className="text-sm max-w-sm mt-2 text-slate-200">
+          <p className="text-sm max-w-sm mt-2 text-zinc-200">
             {isLogin
               ? "Log in to manage your profile or blogs."
               : "Sign Up to join our community."}

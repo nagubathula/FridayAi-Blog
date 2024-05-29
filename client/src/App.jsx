@@ -5,9 +5,11 @@ import { Toaster } from "@/components/ui/toaster"
 const App = () => {
   return (
     <>
+    <div className="font-arapey">
       <Navbar />
       <Outlet />
       <Toaster />
+      </div>
     </>
   );
 };

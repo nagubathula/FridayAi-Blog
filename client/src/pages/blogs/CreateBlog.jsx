@@ -56,7 +56,7 @@ const CreateBlog = () => {
       <div className="flex flex-col sm:p-10 w-[90%] sm:w-[45rem] h-[fit-content] gap-8 rounded-xl sm:border ">
         <div className="space-y-2 text-sm">
           <h1 className="text-4xl font-[500]">What&#39;s on your mind?</h1>
-          <p className="text-slate-300">
+          <p className="text-zinc-300">
             Start sharing your thoughts and stories with the world by crafting
             your own unique blog on our platform.
           </p>

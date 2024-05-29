@@ -14,12 +14,7 @@ const categories = [
   "finance",
   "news",
   "business",
-  "Entertainment",
-  "crafts",
-  "music",
-  "food",
-  "marketing",
-  "photography",
+  "business",
   "others",
 ];
 export { categories, capitalizeFirstLetter };

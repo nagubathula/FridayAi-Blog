@@ -29,12 +29,12 @@ const BlogsCard = ({ data }) => {
           {data.title}
         </h1>
         <Link
-          className="text-gray-600 hover:underline"
+          className="text-zinc-600 hover:underline"
           to={`/users/${data.author}`}
         >
           @{data.author}
         </Link>
-        <span className="text-gray-600">{date && date.substring(0, 10)}</span>
+        <span className="text-zinc-600">{date && date.substring(0, 10)}</span>
       </div>
     </motion.div>
   );
